@@ -1,13 +1,18 @@
-import {useSelector} from "react-redux";
 import CountNormaForm from "./CountNormaForm";
+import "./App.css"
 
 function App() {
-    const yourNorma = useSelector(state => state.yourNorma.calories);
-
     return (
         <div className="App">
-            <CountNormaForm />
-            {yourNorma}
+            <header className={"header"}>
+
+            </header>
+            <div className={"content"}>
+                <div className={"recipes"}>
+
+                </div>
+                <CountNormaForm className={"CountNormaForm"}/>
+            </div>
         </div>
     );
 }
