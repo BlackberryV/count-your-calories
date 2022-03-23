@@ -1,8 +1,11 @@
+@import "variables";
+
 .Header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
   height: 80px;
-  border: 2px solid #a7c7a7;
+  background-color: rgb($accent, 0.4);
+  border-radius: $radius;
 }

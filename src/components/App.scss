@@ -16,15 +16,16 @@ button {
   font-family: inherit;
   padding: 5px;
   background-color: $accent;
-  border: 2px solid #a2c5a2;
+  border: 2px solid $accent;
   border-radius: $radius;
-  color: inherit;
+  color: #fff;
+  font-weight: 700;
 }
 
 input {
   outline: none;
   border-radius: $radius;
-  border: 2px solid #a2c5a2;
+  border: 2px solid $accent;
   padding: 5px;
   font-family: inherit;
   font-size: inherit;
@@ -40,11 +41,6 @@ input {
     display: flex;
     flex-wrap: nowrap;
     gap: 20px;
-
-    .recipes {
-      border: 2px solid #a7c7a7;
-      width: 800px;
-    }
   }
 }
 

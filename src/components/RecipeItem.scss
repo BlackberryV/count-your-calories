@@ -1,0 +1,20 @@
+@import "variables";
+
+.RecipeItem {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+
+  width: 200px;
+  height: 285px;
+  padding: 5px;
+  border-radius: $radius;
+
+  background-color: rgb($accent, 0.4);
+
+  .label {
+    font-family: $header-text;
+    font-style: italic;
+    font-size: 17px;
+  }
+}

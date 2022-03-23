@@ -14,16 +14,17 @@ button {
   font-size: inherit;
   font-family: inherit;
   padding: 5px;
-  background-color: #bed9be;
-  border: 2px solid #a2c5a2;
+  background-color: #9bbe9b;
+  border: 2px solid #9bbe9b;
   border-radius: 3px;
-  color: inherit;
+  color: #fff;
+  font-weight: 700;
 }
 
 input {
   outline: none;
   border-radius: 3px;
-  border: 2px solid #a2c5a2;
+  border: 2px solid #9bbe9b;
   padding: 5px;
   font-family: inherit;
   font-size: inherit;
@@ -39,10 +40,6 @@ input {
   display: flex;
   flex-wrap: nowrap;
   gap: 20px;
-}
-.App .content .recipes {
-  border: 2px solid #a7c7a7;
-  width: 800px;
 }
 
 /*# sourceMappingURL=App.css.map */
