@@ -10,6 +10,26 @@ body {
   color: $dark;
 }
 
+button {
+  font-size: inherit;
+  font-family: inherit;
+  padding: 5px;
+  background-color: $accent;
+  border: 2px solid #a2c5a2;
+  border-radius: $radius;
+  color: inherit;
+}
+
+input {
+  outline: none;
+  border-radius: $radius;
+  border: 2px solid #a2c5a2;
+  padding: 5px;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
 .App {
   display: flex;
   flex-direction: column;

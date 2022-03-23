@@ -6,7 +6,7 @@ import "./CountNormaForm.css"
 const CountNormaForm = () => {
 
     const dispatch = useDispatch();
-    const yourNorma = useSelector(state => state.yourNorma.calories);
+    const yourNorma = useSelector(state => state.yourNormaReducer.calories);
 
     const [weight, setWeight] = useState("");
     const [height, setHeight] = useState("");

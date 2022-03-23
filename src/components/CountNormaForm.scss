@@ -21,22 +21,5 @@
 
   input {
     display: block;
-    outline: none;
-    border-radius: $radius;
-    border: 1px solid $dark;
-    padding: 5px;
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-  }
-
-  button {
-    font-size: inherit;
-    font-family: inherit;
-    padding: 8px;
-    background-color: $accent;
-    border: 2px solid #a2c5a2;
-    border-radius: $radius;
-    color: inherit;
   }
 }

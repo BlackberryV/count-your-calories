@@ -1,0 +1,12 @@
+@import "variables";
+
+.SearchForm {
+  margin: 20px;
+  button {
+    border-radius:  0 $radius $radius 0;
+  }
+  input {
+    border-radius: $radius 0 0 $radius;
+    border-right: none;
+  }
+}
