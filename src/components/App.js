@@ -1,13 +1,11 @@
 import CountNormaForm from "./CountNormaForm";
 import "./App.css"
-import SearchForm from "./SearchForm";
+import Header from "./Header";
 
 function App() {
     return (
         <div className="App">
-            <header className={"header"}>
-                <SearchForm className={"SearchForm"}/>
-            </header>
+            <Header/>
             <div className={"content"}>
                 <div className={"recipes"}>
 

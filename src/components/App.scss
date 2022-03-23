@@ -8,6 +8,7 @@ body {
   font-family: $basic-text;
   font-size: 16px;
   color: $dark;
+  position: relative;
 }
 
 button {
@@ -33,13 +34,7 @@ input {
 .App {
   display: flex;
   flex-direction: column;
-  position: relative;
   gap: 15px;
-
-  .header {
-    height: 80px;
-    border: 2px solid #a7c7a7;
-  }
 
   .content {
     display: flex;
@@ -48,7 +43,8 @@ input {
 
     .recipes {
       border: 2px solid #a7c7a7;
-      width: 900px;
+      width: 800px;
     }
   }
 }
+

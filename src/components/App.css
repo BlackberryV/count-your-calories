@@ -7,6 +7,7 @@ body {
   font-family: Roboto, sans-serif;
   font-size: 16px;
   color: #0d4b0d;
+  position: relative;
 }
 
 button {
@@ -32,12 +33,7 @@ input {
 .App {
   display: flex;
   flex-direction: column;
-  position: relative;
   gap: 15px;
-}
-.App .header {
-  height: 80px;
-  border: 2px solid #a7c7a7;
 }
 .App .content {
   display: flex;
@@ -46,7 +42,7 @@ input {
 }
 .App .content .recipes {
   border: 2px solid #a7c7a7;
-  width: 900px;
+  width: 800px;
 }
 
 /*# sourceMappingURL=App.css.map */
