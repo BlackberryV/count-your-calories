@@ -1,5 +1,5 @@
 import {useSelector} from "react-redux";
-import RecipeItem from "./RecipeItem";
+import RecipeItem from "../RecipeItem/RecipeItem";
 import "./RecipesPage.css"
 
 const RecipesPage = () => {

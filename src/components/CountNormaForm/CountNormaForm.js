@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useState} from "react";
-import {countCaloriesNormaAction} from "../reducers/yourNormaReducer";
+import {countCaloriesNormaAction} from "../../reducers/yourNormaReducer";
 import "./CountNormaForm.css"
 
 const CountNormaForm = () => {

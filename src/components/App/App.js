@@ -1,7 +1,7 @@
-import CountNormaForm from "./CountNormaForm";
+import CountNormaForm from "../CountNormaForm/CountNormaForm";
 import "./App.css"
-import Header from "./Header";
-import RecipesPage from "./RecipesPage";
+import Header from "../Header/Header";
+import RecipesPage from "../RecipesPage/RecipesPage";
 
 function App() {
     return (

@@ -1,4 +1,4 @@
-@import "variables";
+@import "../variables";
 
 body {
   margin: 0;
@@ -19,7 +19,6 @@ button {
   border: 2px solid $accent;
   border-radius: $radius;
   color: #fff;
-  font-weight: 700;
 }
 
 input {
@@ -42,5 +41,7 @@ input {
     flex-wrap: nowrap;
     gap: 20px;
   }
+
 }
+
 
