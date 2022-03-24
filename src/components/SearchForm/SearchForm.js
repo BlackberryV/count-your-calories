@@ -2,15 +2,18 @@ import {useState} from "react";
 import {useDispatch} from "react-redux";
 import {searchRecipes} from "../../reducers/asyncActions";
 import "./SearchForm.css"
+import {useNavigate} from "react-router-dom";
 
 const SearchForm = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const [inputValue, setInputValue] = useState("");
     const handleSubmit = (e) => {
         e.preventDefault();
         if (inputValue === "") return
         dispatch(searchRecipes(inputValue))
+        navigate("/search")
         setInputValue("");
     }
 

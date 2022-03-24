@@ -12,7 +12,7 @@ const RecipePage = () => {
                 {recipe.recipe.ingredientLines.map(e => <li>{e}</li>)}
                 <div>
                     <a href={recipe.recipe.url} target={"_blank"}>If you want to cook this
-                        recipe, then click here</a>
+                        recipe, than click here</a>
                 </div>
             </ul>
             <div className={"characteristics"}>

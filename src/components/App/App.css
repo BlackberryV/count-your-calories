@@ -34,8 +34,8 @@ button {
   font-size: inherit;
   font-family: inherit;
   padding: 5px;
-  background-color: #9bbe9b;
-  border: 2px solid #9bbe9b;
+  background-color: #75a275;
+  border: 2px solid #75a275;
   border-radius: 3px;
   color: #fff;
 }
@@ -48,7 +48,7 @@ button:hover, button:active {
 input {
   outline: none;
   border-radius: 3px;
-  border: 2px solid #9bbe9b;
+  border: 2px solid #75a275;
   padding: 5px;
   font-family: inherit;
   font-size: inherit;

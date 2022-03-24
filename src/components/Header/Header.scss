@@ -16,4 +16,33 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.dropdown {
+  .dropdown-content {
+    display: none;
+
+  }
+}
+
+.dropdown:hover, .dropdown:active{
+  .dropdown-content {
+    //margin-top: 3px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+    background-color: rgb($accent, 0.6);
+
+    a {
+      color: white;
+    }
+  }
 }
