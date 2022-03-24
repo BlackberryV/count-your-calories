@@ -11,10 +11,13 @@ const CountNormaForm = () => {
     const [weight, setWeight] = useState("");
     const [height, setHeight] = useState("");
     const [age, setAge] = useState("");
-    const [sex, setSex] = useState("male");
+    const [sex, setSex] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        if (!sex || !weight || !age || !height) {
+            return
+        }
         dispatch(countCaloriesNormaAction({
             sex: sex,
             weight: weight,
@@ -42,23 +45,23 @@ const CountNormaForm = () => {
                     <input
                         value={weight}
                         onChange={e => setWeight(e.target.value)}
-                        type={"number"}/>
+                        type={"number"} id={"weight"}/>
                 </label>
                 <label>Height in cm
                     <input
                         value={height}
                         onChange={e => setHeight(e.target.value)}
-                        type={"number"}/>
+                        type={"number"} id={"height"}/>
                 </label>
                 <label>Age in years
                     <input
                         value={age}
                         onChange={e => setAge(e.target.value)}
-                        type={"number"}/>
+                        type={"number"} id={"age"}/>
                 </label>
-                <button onClick={handleSubmit}>Count your norma!</button>
+                <button onClick={handleSubmit} type={"submit"}>Count your norma!</button>
             </form>
-            <div className={"count-results"}>Your results: {yourNorma}</div>
+            <div className={"count-results"}>Your results: {Math.round(yourNorma)}</div>
         </div>
     )
 }

@@ -6,7 +6,9 @@ const RecipesPage = () => {
     const recipes = useSelector(state => state.recipesReducer.recipes);
     return (
         <div className={"RecipesPage"}>
-            {recipes.map(recipe => <RecipeItem key={recipe.recipe.uri} recipe={recipe}/>)}
+            {recipes.length ?
+                recipes.map(recipe => <RecipeItem key={recipe.recipe.uri} recipe={recipe}/>)
+                : <div>Sorry, we do not have such recipes, try to find something else.</div>}
         </div>
     )
 }

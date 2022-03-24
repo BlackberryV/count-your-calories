@@ -9,6 +9,7 @@ const SearchForm = () => {
     const [inputValue, setInputValue] = useState("");
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (inputValue === "") return
         dispatch(searchRecipes(inputValue))
         setInputValue("");
     }

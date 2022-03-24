@@ -40,6 +40,11 @@ button {
   color: #fff;
 }
 
+button:hover, button:active {
+  background-color: #78a278;
+  border: 2px solid #78a278;
+}
+
 input {
   outline: none;
   border-radius: 3px;
