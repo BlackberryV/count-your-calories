@@ -10,8 +10,8 @@ const RecipeItem = ({recipe}) => {
                     to={`/recipe/${recipe.recipe.label}`}
                     state={{recipe: recipe}}
                     className={"label"}>
-                    {recipe.recipe.label.length > 45 ?
-                    recipe.recipe.label.slice(0, 46) + "..." : recipe.recipe.label}
+                    {recipe.recipe.label.length > 40 ?
+                    recipe.recipe.label.slice(0, 40) + "..." : recipe.recipe.label}
                 </NavLink>
                 <div>Calories: {Math.round(recipe.recipe.calories)}</div>
             </div>
