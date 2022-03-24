@@ -1,17 +1,18 @@
-import CountNormaForm from "../CountNormaForm/CountNormaForm";
 import "./App.css"
 import Header from "../Header/Header";
+import {Route, Routes} from "react-router-dom";
+import RecipePage from "../RecipePage/RecipePage";
 import RecipesPage from "../RecipesPage/RecipesPage";
 
 function App() {
-    return (
-        <div className="App">
-            <Header/>
-            <div className={"content"}>
-                <RecipesPage className={"RecipesPage"}/>
-                <CountNormaForm className={"CountNormaForm"}/>
-            </div>
-        </div>
+    return (<>
+            <Routes>
+                <Route path={"/"} element={<Header/>}>
+                    <Route path={"/"} index element={<RecipesPage/>}/>
+                    <Route path={"/recipe/:label"} element={<RecipePage/>}/>
+                </Route>
+            </Routes>
+        </>
     );
 }
 

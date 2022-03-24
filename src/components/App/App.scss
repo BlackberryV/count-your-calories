@@ -11,6 +11,26 @@ body {
   position: relative;
 }
 
+a {
+  text-decoration: none;
+  color: $dark;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+ul {
+  margin-top: 0;
+  li {
+    margin-bottom: 7px;
+  }
+}
+
 button {
   font-size: inherit;
   font-family: inherit;
@@ -39,9 +59,13 @@ input {
   .content {
     display: flex;
     flex-wrap: nowrap;
+    justify-content: space-between;
     gap: 20px;
-  }
 
+    .content_left {
+      width: 880px;
+    }
+  }
 }
 
 

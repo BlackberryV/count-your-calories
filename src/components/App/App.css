@@ -10,6 +10,26 @@ body {
   position: relative;
 }
 
+a {
+  text-decoration: none;
+  color: #0d4b0d;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+ul {
+  margin-top: 0;
+}
+ul li {
+  margin-bottom: 7px;
+}
+
 button {
   font-size: inherit;
   font-family: inherit;
@@ -38,7 +58,11 @@ input {
 .App .content {
   display: flex;
   flex-wrap: nowrap;
+  justify-content: space-between;
   gap: 20px;
+}
+.App .content .content_left {
+  width: 880px;
 }
 
 /*# sourceMappingURL=App.css.map */

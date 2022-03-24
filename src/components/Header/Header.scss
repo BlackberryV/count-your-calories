@@ -8,4 +8,12 @@
   height: 80px;
   background-color: rgb($accent, 0.4);
   border-radius: $radius;
+
+  .icon {
+    background-image: url("./pizza-icon.png");
+    width: 41px;
+    height: 41px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
