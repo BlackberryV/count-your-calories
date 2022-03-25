@@ -1,7 +1,9 @@
 import "./RecipeItem.css"
 import {NavLink} from "react-router-dom";
+import {useDispatch} from "react-redux";
 
 const RecipeItem = ({recipe}) => {
+    // const dispatch = useDispatch(); //todo button for adding to my recipes array
     return (
         <div className={"RecipeItem"}>
             <img src={recipe.recipe.image} alt={recipe.recipe.label}/>

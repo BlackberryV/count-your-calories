@@ -42,8 +42,10 @@ button {
 }
 
 button:hover, button:active {
-  background-color: #78a278;
+  background-color: #679d67;
   border: 2px solid #78a278;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 input {

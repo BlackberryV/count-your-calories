@@ -1,17 +1,8 @@
-import {useDispatch, useSelector} from "react-redux";
 import RecipeItem from "../RecipeItem/RecipeItem";
-import "./RecipesPage.css"
-import {useLocation} from "react-router-dom";
-import {useEffect} from "react";
+import {useSelector} from "react-redux";
 
-const RecipesPage = ({getFunc}) => {
-    const dispatcher = useDispatch();
-    const location = useLocation()
+const SearchResults = () => {
     const recipes = useSelector(state => state.recipesReducer.recipes);
-
-    useEffect(() => {
-            dispatcher(getFunc(location.state.filter))
-    }, [location.state.filter])
 
     return (
         <div className={"RecipesPage"}>
@@ -22,4 +13,4 @@ const RecipesPage = ({getFunc}) => {
     )
 }
 
-export default RecipesPage;
+export default SearchResults;
