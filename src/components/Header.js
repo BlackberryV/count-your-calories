@@ -2,6 +2,7 @@ import SearchForm from "./SearchForm";
 import "./styles/Header.css"
 import {NavLink, Outlet} from "react-router-dom"
 import CountNormaForm from "./CountNormaForm";
+import MyRecipes from "./MyRecipes";
 
 const Header = () => {
     return (
@@ -39,7 +40,10 @@ const Header = () => {
                     <div className={"content_left"}>
                         <Outlet/>
                     </div>
-                    <CountNormaForm className={"CountNormaForm"}/>
+                    <div className={"content_right"}>
+                        <CountNormaForm className={"CountNormaForm"}/>
+                        <MyRecipes/>
+                    </div>
                 </div>
             </div>
         </>

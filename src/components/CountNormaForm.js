@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useState} from "react";
-import {countCaloriesNormaAction} from "../reducers/yourNormaReducer";
+import {countCaloriesNormaAction, resetCaloriesNormaAction} from "../reducers/yourNormaReducer";
 import "./styles/CountNormaForm.css"
 
 const CountNormaForm = () => {
@@ -27,42 +27,48 @@ const CountNormaForm = () => {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit} className={"CountNormaForm"}>
-                <div className={"radio"}>
-                    <div>
-                        <label>Female</label>
-                        <input className={"radio"} type={"radio"} name={"sex"} value={"female"}
-                               onChange={e => setSex(e.target.value)}/>
+        <>
+            {!yourNorma ?
+                <form onSubmit={handleSubmit} className={"CountNormaForm"}>
+                    <div className={"radio"}>
+                        <div>
+                            <label>Female</label>
+                            <input className={"radio"} type={"radio"} name={"sex"} value={"female"}
+                                   onChange={e => setSex(e.target.value)}/>
+                        </div>
+                        <div>
+                            <label>Male</label>
+                            <input className={"radio"} type={"radio"} name={"sex"} value={"male"}
+                                   onChange={e => setSex(e.target.value)}/>
+                        </div>
                     </div>
-                    <div>
-                        <label>Male</label>
-                        <input className={"radio"} type={"radio"} name={"sex"} value={"male"}
-                               onChange={e => setSex(e.target.value)}/>
-                    </div>
+                    <label>Weight in kg
+                        <input
+                            value={weight}
+                            onChange={e => setWeight(e.target.value)}
+                            type={"number"} id={"weight"}/>
+                    </label>
+                    <label>Height in cm
+                        <input
+                            value={height}
+                            onChange={e => setHeight(e.target.value)}
+                            type={"number"} id={"height"}/>
+                    </label>
+                    <label>Age in years
+                        <input
+                            value={age}
+                            onChange={e => setAge(e.target.value)}
+                            type={"number"} id={"age"}/>
+                    </label>
+                    <button onClick={handleSubmit} type={"submit"}>Count your norma!</button>
+                </form>
+                :
+                <div className={"CountNormaForm"}>
+                    <div className={"count-results"}>Your results: {Math.round(yourNorma)}</div>
+                    <button onClick={() => dispatch(resetCaloriesNormaAction())}>Calculate one more time</button>
                 </div>
-                <label>Weight in kg
-                    <input
-                        value={weight}
-                        onChange={e => setWeight(e.target.value)}
-                        type={"number"} id={"weight"}/>
-                </label>
-                <label>Height in cm
-                    <input
-                        value={height}
-                        onChange={e => setHeight(e.target.value)}
-                        type={"number"} id={"height"}/>
-                </label>
-                <label>Age in years
-                    <input
-                        value={age}
-                        onChange={e => setAge(e.target.value)}
-                        type={"number"} id={"age"}/>
-                </label>
-                <button onClick={handleSubmit} type={"submit"}>Count your norma!</button>
-            </form>
-            <div className={"count-results"}>Your results: {Math.round(yourNorma)}</div>
-        </div>
+            }
+        </>
     )
 }
 

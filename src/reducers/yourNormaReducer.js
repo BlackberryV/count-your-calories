@@ -1,4 +1,4 @@
-import {COUNT_CALORIES_NORMA} from "../constants";
+import {COUNT_CALORIES_NORMA, RESET_CALORIES_NORMA} from "../constants";
 
 const defaultState = {
     calories: 0
@@ -14,9 +14,12 @@ export const yourNormaReducer = (state = defaultState, action) => {
                     :
                     447.6 + (9.2 * action.payload.weight) + (3.1 * action.payload.height) - (4.3 * action.payload.age)
             }
+        case RESET_CALORIES_NORMA:
+            return {...state, calories: 0}
         default:
             return state
     }
 }
 
 export const countCaloriesNormaAction = (payload) => ({type: COUNT_CALORIES_NORMA, payload})
+export const resetCaloriesNormaAction = (payload) => ({type: RESET_CALORIES_NORMA, payload})

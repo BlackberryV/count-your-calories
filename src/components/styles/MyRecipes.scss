@@ -1,0 +1,18 @@
+@import "../variables";
+
+.MyRecipes {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  h3 {
+    margin: 10px 0 0 0;
+    padding: 0;
+    font-weight: 700;
+    font-family: $header-text;
+  }
+  .title {
+    font-family: $header-text;
+    font-weight: 700;
+    font-style: italic;
+  }
+}
