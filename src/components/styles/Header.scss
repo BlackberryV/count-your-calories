@@ -10,7 +10,7 @@
   border-radius: $radius;
 
   .icon {
-    background-image: url("./pizza-icon.png");
+    background-image: url("pizza-icon.png");
     width: 41px;
     height: 41px;
     background-repeat: no-repeat;
@@ -40,6 +40,7 @@
     padding: 10px;
     gap: 5px;
     background-color: rgb($accent, 0.6);
+    z-index: 1;
 
     a {
       color: white;

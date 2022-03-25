@@ -1,4 +1,4 @@
-import RecipeItem from "../RecipeItem/RecipeItem";
+import RecipeItem from "./RecipeItem";
 import {useSelector} from "react-redux";
 
 const SearchResults = () => {

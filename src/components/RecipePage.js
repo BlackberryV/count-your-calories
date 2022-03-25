@@ -1,7 +1,7 @@
 import {useLocation} from "react-router-dom";
-import "./RecipePage.css"
+import "./styles/RecipePage.css"
 import {useDispatch} from "react-redux";
-import {addMyRecipesAction} from "../../reducers/myRecipesReducer";
+import {addMyRecipesAction} from "../reducers/myRecipesReducer";
 
 const RecipePage = () => {
     const location = useLocation();

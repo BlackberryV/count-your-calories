@@ -1,7 +1,7 @@
-import "./RecipeItem.css"
+import "./styles/RecipeItem.css"
 import {NavLink} from "react-router-dom";
 import {useDispatch} from "react-redux";
-import {addMyRecipesAction} from "../../reducers/myRecipesReducer";
+import {addMyRecipesAction} from "../reducers/myRecipesReducer";
 
 const RecipeItem = ({recipe}) => {
     const dispatch = useDispatch();

@@ -1,7 +1,7 @@
-import SearchForm from "../SearchForm/SearchForm";
-import "./Header.css"
+import SearchForm from "./SearchForm";
+import "./styles/Header.css"
 import {NavLink, Outlet} from "react-router-dom"
-import CountNormaForm from "../CountNormaForm/CountNormaForm";
+import CountNormaForm from "./CountNormaForm";
 
 const Header = () => {
     return (
