@@ -7,9 +7,7 @@ const defaultState = {
 export const myRecipesReducer = (state = defaultState, action) => {
     switch (action.type) {
         case ADD_MY_RECIPE:
-            return {
-                myRecipes: [...state.myRecipes, action.payload]
-            }
+            return {myRecipes: [...state.myRecipes, action.payload]};
         default:
             return state;
     }
