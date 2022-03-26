@@ -18,7 +18,7 @@ const RecipeItem = ({recipe}) => {
                     {recipe.recipe.label.length > 40 ?
                         recipe.recipe.label.slice(0, 40) + "..." : recipe.recipe.label}
                 </NavLink>
-                <div>Calories: {Math.round(recipe.recipe.calories)}</div>
+                <div>Calories: {Math.round(recipe.recipe.calories)} cal</div>
             </div>
         </div>
     )
