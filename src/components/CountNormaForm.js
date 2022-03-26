@@ -16,8 +16,17 @@ const CountNormaForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         if (!sex || !weight || !age || !height) {
+            if (!sex) document.getElementById("sex").classList.add("empty-radio")
+            if (!height) document.getElementById("height").classList.add("wrong-input");
+            if (!age) document.getElementById("age").classList.add("wrong-input");
+            if (!weight) document.getElementById("weight").classList.add("wrong-input");
             return
         }
+        document.getElementById("height").classList.remove("wrong-input");
+        document.getElementById("age").classList.remove("wrong-input");
+        document.getElementById("weight").classList.remove("wrong-input");
+        document.getElementById("sex").classList.remove("empty-radio")
+
         dispatch(countCaloriesNormaAction({
             sex: sex,
             weight: weight,
@@ -30,7 +39,7 @@ const CountNormaForm = () => {
         <>
             {!yourNorma ?
                 <form onSubmit={handleSubmit} className={"CountNormaForm"}>
-                    <div className={"radio"}>
+                    <div className={"radio"} id={"sex"}>
                         <div>
                             <label>Female</label>
                             <input className={"radio"} type={"radio"} name={"sex"} value={"female"}

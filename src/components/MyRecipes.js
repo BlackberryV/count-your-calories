@@ -10,7 +10,7 @@ const MyRecipes = () => {
         <div className={"MyRecipes"}>
             <h3>My Recipes</h3>
             {!myRecipes.length ?
-                <div>Now your recipe list is empty, press plus button near any recipe your like to add</div> : ""}
+                <div>Now your recipe list is empty, press plus button near any recipe you liked to add</div> : ""}
             {myRecipes.map(e =>
                 <div key={e.recipe.label} className={"recipe-container"}>
                     <div>

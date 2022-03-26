@@ -14,16 +14,16 @@ const RecipePage = () => {
         <div className={"info-container"}>
             <img src={recipe.recipe.images.REGULAR.url} alt={"/"}/>
             <ul>
-                {recipe.recipe.ingredientLines.map(e => <li>{e}</li>)}
+                {recipe.recipe.ingredientLines.map(e => <li key={Math.random().toFixed(8)}>{e}</li>)}
                 <div>
                     <a href={recipe.recipe.url} target={"_blank"}>If you want to cook this
                         recipe, than click here</a>
                 </div>
             </ul>
             <div className={"characteristics"}>
-                <div><span>Total time: </span>{recipe.recipe.totalTime}</div>
-                <div><span>Total weight: </span>{Math.round(recipe.recipe.totalWeight)}</div>
-                <div><span>Calories: </span>{Math.round(recipe.recipe.calories)}</div>
+                <div><span>Total time: </span>{recipe.recipe.totalTime} m</div>
+                <div><span>Total weight: </span>{Math.round(recipe.recipe.totalWeight)} g</div>
+                <div><span>Calories: </span>{Math.round(recipe.recipe.calories)} cal</div>
                 <button className={"small-btn"} onClick={() => {
                     dispatch(addMyRecipesAction(recipe))
                 }}>+
