@@ -41,7 +41,11 @@ button {
   color: #fff;
 }
 
-button:hover, button:active {
+.small-btn {
+  padding: 0 6px;
+}
+
+button:hover, button:active, .small-btn:hover, .small-btn:active {
   background-color: #538a53;
   border: 2px solid #538a53;
   cursor: pointer;

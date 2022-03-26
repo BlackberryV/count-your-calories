@@ -8,7 +8,7 @@ const RecipeItem = ({recipe}) => {
 
     return (
         <div className={"RecipeItem"}>
-                <button className={"add-btn"} onClick={() => dispatch(addMyRecipesAction(recipe))}>+</button>
+                <button className={"small-btn"} onClick={() => dispatch(addMyRecipesAction(recipe))}>+</button>
                 <img src={recipe.recipe.image} alt={recipe.recipe.label}/>
             <div>
                 <NavLink

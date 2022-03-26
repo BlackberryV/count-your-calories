@@ -24,7 +24,7 @@ const RecipePage = () => {
                 <div><span>Total time: </span>{recipe.recipe.totalTime}</div>
                 <div><span>Total weight: </span>{Math.round(recipe.recipe.totalWeight)}</div>
                 <div><span>Calories: </span>{Math.round(recipe.recipe.calories)}</div>
-                <button onClick={() => {
+                <button className={"small-btn"} onClick={() => {
                     dispatch(addMyRecipesAction(recipe))
                 }}>+
                 </button> Add to my recipes
