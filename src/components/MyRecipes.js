@@ -7,8 +7,9 @@ const MyRecipes = () => {
     return (
         <div className={"MyRecipes"}>
             <h3>My Recipes</h3>
+            {!myRecipes.length ? <div>Now your recipe list is empty, press plus button near any recipe your like to add</div> : ""}
             {myRecipes.map(e =>
-                <div>
+                <div key={e.recipe.label}>
                     <NavLink
                         to={`/recipe/${e.recipe.label}`}
                         state={{recipe: e}}

@@ -64,7 +64,7 @@ const CountNormaForm = () => {
                 </form>
                 :
                 <div className={"CountNormaForm"}>
-                    <div className={"count-results"}>Your results: {Math.round(yourNorma)}</div>
+                    <div className={"count-results"}>Your norma: {Math.round(yourNorma)} cal</div>
                     <button onClick={() => dispatch(resetCaloriesNormaAction())}>Calculate one more time</button>
                 </div>
             }
