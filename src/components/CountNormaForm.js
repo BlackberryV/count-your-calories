@@ -2,31 +2,27 @@ import {useDispatch, useSelector} from "react-redux";
 import {useState} from "react";
 import {countCaloriesNormaAction, resetCaloriesNormaAction} from "../reducers/yourNormaReducer";
 import "./styles/CountNormaForm.css"
+import {useForm} from "react-hook-form";
 
 const CountNormaForm = () => {
 
     const dispatch = useDispatch();
     const yourNorma = useSelector(state => state.yourNormaReducer.calories);
 
+    const {
+        register,
+        formState: {
+            errors
+        },
+        handleSubmit,
+    } = useForm();
+
     const [weight, setWeight] = useState("");
     const [height, setHeight] = useState("");
     const [age, setAge] = useState("");
-    const [sex, setSex] = useState("");
+    const [sex, setSex] = useState("male");
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        if (!sex || !weight || !age || !height) {
-            if (!sex) document.getElementById("sex").classList.add("empty-radio")
-            if (!height) document.getElementById("height").classList.add("wrong-input");
-            if (!age) document.getElementById("age").classList.add("wrong-input");
-            if (!weight) document.getElementById("weight").classList.add("wrong-input");
-            return
-        }
-        document.getElementById("height").classList.remove("wrong-input");
-        document.getElementById("age").classList.remove("wrong-input");
-        document.getElementById("weight").classList.remove("wrong-input");
-        document.getElementById("sex").classList.remove("empty-radio")
-
+    const onSubmit = () => {
         dispatch(countCaloriesNormaAction({
             sex: sex,
             weight: weight,
@@ -38,39 +34,66 @@ const CountNormaForm = () => {
     return (
         <>
             {!yourNorma ?
-                <form onSubmit={handleSubmit} className={"CountNormaForm"}>
+                <form onSubmit={handleSubmit(onSubmit)} className={"CountNormaForm"}>
                     <h3>Count your calories norma</h3>
                     <label>Weight in kg
                         <input
-                            value={weight}
-                            onChange={e => setWeight(e.target.value)}
-                            type={"number"} id={"weight"}/>
+                            {...register("weight", {
+                                required: true,
+                                value: weight,
+                                onChange: e => setWeight(e.target.value)
+                            })}
+                            type={"number"}
+                        />
+                        {errors?.weight ? <span className={"error-message"}>Required field!</span> : ""}
+
                     </label>
                     <label>Height in cm
                         <input
-                            value={height}
-                            onChange={e => setHeight(e.target.value)}
-                            type={"number"} id={"height"}/>
+                            {...register("height", {
+                                required: true,
+                                value: height,
+                                onChange: e => setHeight(e.target.value)
+                            })}
+                            type={"number"}
+                        />
+                        {errors?.height ? <span className={"error-message"}>Required field!</span> : ""}
                     </label>
                     <label>Age in years
                         <input
-                            value={age}
-                            onChange={e => setAge(e.target.value)}
-                            type={"number"} id={"age"}/>
+                            {...register("age", {
+                                required: true,
+                                value: age,
+                                onChange: e => setAge(e.target.value)
+                            })}
+                            type={"number"}
+                        />
+                        {errors?.age ? <span className={"error-message"}>Required field!</span> : ""}
                     </label>
-                    <div className={"radio"} id={"sex"}>
+                    <div className={"radio"}>
                         <div>
                             <label>Female</label>
-                            <input className={"radio"} type={"radio"} name={"sex"} value={"female"}
-                                   onChange={e => setSex(e.target.value)}/>
+                            <input className={"radio"} type={"radio"}
+                                   {...register("sex", {
+                                       required: true,
+                                       value: "female",
+                                       onChange: e => setSex(e.target.value)
+                                   })}
+                            />
                         </div>
                         <div>
                             <label>Male</label>
-                            <input className={"radio"} type={"radio"} name={"sex"} value={"male"}
-                                   onChange={e => setSex(e.target.value)}/>
+                            <input className={"radio"} type={"radio"}
+                                   {...register("sex", {
+                                       required: true,
+                                       value: "male",
+                                       onChange: e => setSex(e.target.value)
+                                   })}
+                            />
                         </div>
                     </div>
-                    <button onClick={handleSubmit} type={"submit"}>Count!</button>
+                    {errors?.sex ? <span className={"error-message"}>Required field!</span> : ""}
+                    <button onClick={handleSubmit(onSubmit)} type={"submit"}>Count!</button>
                 </form>
                 :
                 <div className={"CountNormaForm"}>

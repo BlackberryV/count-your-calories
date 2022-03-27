@@ -28,8 +28,7 @@ const RecipePage = () => {
                     <button className={"small-btn"} onClick={() => {
                         setModalActive(true)
                     }}>+
-                    </button>
-                    Add to my recipes
+                    </button> Add to my recipes
                 </div>
             </div>
             <Modal active={modalActive} setActive={setModalActive} recipe={recipe}/>

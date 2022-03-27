@@ -21,10 +21,7 @@
   }
 }
 
-.wrong-input {
-   border: 2px solid #ef6938;
-}
-
-.empty-radio {
+.error-message {
   color: #ef6938;
+  position: relative;
 }
