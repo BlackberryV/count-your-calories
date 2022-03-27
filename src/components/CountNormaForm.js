@@ -39,18 +39,7 @@ const CountNormaForm = () => {
         <>
             {!yourNorma ?
                 <form onSubmit={handleSubmit} className={"CountNormaForm"}>
-                    <div className={"radio"} id={"sex"}>
-                        <div>
-                            <label>Female</label>
-                            <input className={"radio"} type={"radio"} name={"sex"} value={"female"}
-                                   onChange={e => setSex(e.target.value)}/>
-                        </div>
-                        <div>
-                            <label>Male</label>
-                            <input className={"radio"} type={"radio"} name={"sex"} value={"male"}
-                                   onChange={e => setSex(e.target.value)}/>
-                        </div>
-                    </div>
+                    <h3>Count your calories norma</h3>
                     <label>Weight in kg
                         <input
                             value={weight}
@@ -69,7 +58,19 @@ const CountNormaForm = () => {
                             onChange={e => setAge(e.target.value)}
                             type={"number"} id={"age"}/>
                     </label>
-                    <button onClick={handleSubmit} type={"submit"}>Count your norma!</button>
+                    <div className={"radio"} id={"sex"}>
+                        <div>
+                            <label>Female</label>
+                            <input className={"radio"} type={"radio"} name={"sex"} value={"female"}
+                                   onChange={e => setSex(e.target.value)}/>
+                        </div>
+                        <div>
+                            <label>Male</label>
+                            <input className={"radio"} type={"radio"} name={"sex"} value={"male"}
+                                   onChange={e => setSex(e.target.value)}/>
+                        </div>
+                    </div>
+                    <button onClick={handleSubmit} type={"submit"}>Count!</button>
                 </form>
                 :
                 <div className={"CountNormaForm"}>

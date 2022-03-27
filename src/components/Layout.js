@@ -1,10 +1,10 @@
 import SearchForm from "./SearchForm";
-import "./styles/Header.css"
+import "./styles/Layout.css"
 import {NavLink, Outlet} from "react-router-dom"
 import CountNormaForm from "./CountNormaForm";
 import MyRecipes from "./MyRecipes";
 
-const Header = () => {
+const Layout = () => {
     return (
         <>
             <div className="App">
@@ -50,4 +50,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default Layout;

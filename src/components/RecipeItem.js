@@ -1,14 +1,14 @@
 import "./styles/RecipeItem.css"
 import {NavLink} from "react-router-dom";
-import {useDispatch} from "react-redux";
-import {addMyRecipesAction} from "../reducers/myRecipesReducer";
+import Modal from "./Modal";
+import {useState} from "react";
 
 const RecipeItem = ({recipe}) => {
-    const dispatch = useDispatch();
+    const [modalActive, setModalActive] = useState(false);
 
     return (
         <div className={"RecipeItem"}>
-                <button className={"small-btn"} onClick={() => dispatch(addMyRecipesAction(recipe))}>+</button>
+                <button className={"small-btn"} onClick={() => setModalActive(true)}>+</button>
                 <img src={recipe.recipe.image} alt={recipe.recipe.label}/>
             <div>
                 <NavLink
@@ -20,6 +20,7 @@ const RecipeItem = ({recipe}) => {
                 </NavLink>
                 <div>Calories: {Math.round(recipe.recipe.calories)} cal</div>
             </div>
+            <Modal active={modalActive} setActive={setModalActive} recipe={recipe}/>
         </div>
     )
 }

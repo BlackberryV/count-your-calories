@@ -4,14 +4,6 @@
   display: flex;
   flex-direction: column;
   row-gap: 12px;
-
-  h3 {
-    margin: 10px 0 0 0;
-    padding: 0;
-    font-weight: 700;
-    font-family: $header-text;
-  }
-
 }
 
 .recipe-container {
@@ -24,4 +16,11 @@
     font-weight: 700;
     font-style: italic;
   }
+}
+
+.calories-sum {
+  border-top: 1px solid $dark;
+  padding: 10px;
+  font-weight: 700;
+  text-align: center;
 }

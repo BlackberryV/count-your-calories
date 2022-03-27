@@ -1,7 +1,7 @@
 import {COUNT_CALORIES_NORMA, RESET_CALORIES_NORMA} from "../constants";
 
 const defaultState = {
-    calories: 0
+    calories: 0,
 }
 
 export const yourNormaReducer = (state = defaultState, action) => {
