@@ -1,7 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useState} from "react";
 import {countCaloriesNormaAction, resetCaloriesNormaAction} from "../reducers/yourNormaReducer";
-import "./styles/CountNormaForm.css"
+import "./styles/index.css"
 import {useForm} from "react-hook-form";
 
 const CountNormaForm = () => {
@@ -71,8 +71,7 @@ const CountNormaForm = () => {
                         {errors?.age ? <span className={"error-message"}>Required field!</span> : ""}
                     </label>
                     <div className={"radio"}>
-                        <div>
-                            <label>Female</label>
+                        <label>Female
                             <input className={"radio"} type={"radio"}
                                    {...register("sex", {
                                        required: true,
@@ -80,9 +79,8 @@ const CountNormaForm = () => {
                                        onChange: e => setSex(e.target.value)
                                    })}
                             />
-                        </div>
-                        <div>
-                            <label>Male</label>
+                        </label>
+                        <label>Male
                             <input className={"radio"} type={"radio"}
                                    {...register("sex", {
                                        required: true,
@@ -90,7 +88,7 @@ const CountNormaForm = () => {
                                        onChange: e => setSex(e.target.value)
                                    })}
                             />
-                        </div>
+                        </label>
                     </div>
                     {errors?.sex ? <span className={"error-message"}>Required field!</span> : ""}
                     <button onClick={handleSubmit(onSubmit)} type={"submit"}>Count!</button>

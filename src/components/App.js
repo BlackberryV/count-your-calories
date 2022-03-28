@@ -1,4 +1,4 @@
-import "./styles/App.css"
+import "./styles/index.css"
 import Layout from "./Layout";
 import {Route, Routes} from "react-router-dom";
 import RecipePage from "./RecipePage";

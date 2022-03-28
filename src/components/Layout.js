@@ -1,5 +1,5 @@
 import SearchForm from "./SearchForm";
-import "./styles/Layout.css"
+import "./styles/index.css"
 import {NavLink, Outlet} from "react-router-dom"
 import CountNormaForm from "./CountNormaForm";
 import MyRecipes from "./MyRecipes";
@@ -37,13 +37,11 @@ const Layout = () => {
                     <SearchForm className={"SearchForm"}/>
                 </header>
                 <div className={"content"}>
-                    <div className={"content_left"}>
-                        <Outlet/>
-                    </div>
                     <div className={"content_right"}>
                         <CountNormaForm className={"CountNormaForm"}/>
                         <MyRecipes/>
                     </div>
+                    <Outlet/>
                 </div>
             </div>
         </>

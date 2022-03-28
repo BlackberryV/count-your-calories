@@ -1,8 +1,8 @@
 import {useState} from "react";
 import {useDispatch} from "react-redux";
 import {searchRecipes} from "../reducers/asyncActions";
-import "./styles/SearchForm.css"
 import {useNavigate} from "react-router-dom";
+import "./styles/index.css"
 
 const SearchForm = () => {
     const dispatch = useDispatch();

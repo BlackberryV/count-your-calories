@@ -1,4 +1,4 @@
-import "./styles/Modal.css"
+import "./styles/index.css"
 import {useDispatch} from "react-redux";
 import {addMyRecipesAction} from "../reducers/myRecipesReducer";
 import {useState} from "react";
@@ -23,9 +23,9 @@ const Modal = ({active, setActive, recipe}) => {
     return (
         <div className={active ? "Modal active" : "Modal"} onClick={() => setActive(false)}>
             <div className="modal__content" onClick={e => e.stopPropagation()}>
-                <div className={"title-modal"}>
+                <h4>
                     {recipe.recipe.label}
-                </div>
+                </h4>
                 <form onSubmit={handleSubmit}>
                     <div className={"form-content"}>
                         <div className={"form-content__block"}>

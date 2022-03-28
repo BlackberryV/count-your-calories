@@ -1,5 +1,5 @@
 import {useLocation} from "react-router-dom";
-import "./styles/RecipePage.css"
+import "./styles/index.css"
 import {useState} from "react";
 import Modal from "./Modal";
 
@@ -11,7 +11,7 @@ const RecipePage = () => {
 
     return (
         <div className={"RecipePage"}>
-            <div className={"label"}>{recipe.recipe.label}</div>
+            <h4>{recipe.recipe.label}</h4>
             <div className={"info-container"}>
                 <img src={recipe.recipe.images.REGULAR.url} alt={"/"}/>
                 <ul>
@@ -25,10 +25,12 @@ const RecipePage = () => {
                     <div><span>Total time: </span>{recipe.recipe.totalTime} m</div>
                     <div><span>Total weight: </span>{Math.round(recipe.recipe.totalWeight)} g</div>
                     <div><span>Calories: </span>{Math.round(recipe.recipe.calories)} cal</div>
-                    <button className={"small-btn"} onClick={() => {
-                        setModalActive(true)
-                    }}>+
-                    </button> Add to my recipes
+                    <div>
+                        <button className={"small-btn"} onClick={() => {
+                            setModalActive(true)
+                        }}>+
+                        </button> Add to my recipes
+                    </div>
                 </div>
             </div>
             <Modal active={modalActive} setActive={setModalActive} recipe={recipe}/>

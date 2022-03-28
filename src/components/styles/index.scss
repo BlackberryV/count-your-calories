@@ -1,0 +1,324 @@
+@import "variables";
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-family: $basic-text;
+  font-size: 16px;
+  color: $dark;
+}
+
+
+h3 {
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-weight: 700;
+  font-family: $header-text;
+  text-align: center;
+}
+
+h4 {
+  margin: 0;
+  font-family: $header-text;
+  font-weight: 700;
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  color: $dark;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+ul {
+  margin-top: 0;
+
+  li {
+    margin-bottom: 7px;
+  }
+}
+
+button {
+  font-size: inherit;
+  font-family: inherit;
+  padding: 5px;
+  background-color: $accent;
+  border-radius: $radius;
+  border: 2px solid $accent;
+  color: #fff;
+  outline: none;
+}
+
+.small-btn {
+  padding: 0 6px;
+}
+
+button:hover, button:active, .small-btn:hover, .small-btn:active {
+  background-color: #538a53;
+  border: 2px solid #538a53;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+input {
+  outline: none;
+  border-radius: $radius;
+  border: 2px solid $accent;
+  padding: 5px;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 85vw;
+  gap: 15px;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    .content_right {
+      width: 200px;
+    }
+  }
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb($accent, 0.4);
+  padding: 15px 30px;
+
+  .icon {
+    background-image: url("pizza-icon.png");
+    width: 41px;
+    height: 41px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 30px
+  }
+}
+
+.dropdown {
+  .dropdown-content {
+    display: none;
+  }
+}
+
+.dropdown:hover {
+  .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    padding: 10px;
+    row-gap: 10px;
+    background-color: rgb($accent, 0.8);
+
+    a {
+      color: white;
+    }
+  }
+}
+
+.SearchForm {
+  button {
+    border-radius:  0 $radius $radius 0;
+  }
+  input {
+    border-radius: $radius 0 0 $radius;
+    border-right: none;
+  }
+}
+
+.RecipesPage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 1200px;
+}
+
+.RecipeItem {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+
+  width: 195px;
+  height: 275px;
+  padding: 5px;
+  border-radius: $radius;
+
+  background-color: rgb($accent, 0.15);
+
+  .small-btn {
+    position: absolute;
+    border-radius: 0 $radius $radius $radius;
+  }
+}
+
+.RecipeItem:hover {
+  background-color: rgb($accent, 0.4);
+  transition: 0.3s;
+}
+
+.MyRecipes {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+
+  .recipe-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .calories-sum {
+    border-top: 1px solid $dark;
+    padding: 15px;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+.CountNormaForm {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  gap: 10px;
+
+
+  input {
+    display: block;
+  }
+
+  .radio {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 8px;
+  }
+
+  .error-message {
+    color: #ef6938;
+    position: relative;
+  }
+}
+
+.RecipePage {
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  img {
+    width: 260px;
+    height: 260px;
+  }
+
+  a {
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .info-container {
+    display: flex;
+    gap: 30px;
+
+    .characteristics {
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.Modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(#000, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+  text-decoration: none;
+  z-index: 2;
+
+  .modal__content {
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+
+    h4 {
+      font-size: 23px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      input {
+        width: 30%;
+      }
+
+      .form-content {
+        display: flex;
+        height: 90px;
+
+        .form-content__block {
+          display: flex;
+          justify-content: space-around;
+          flex-direction: column;
+        }
+
+        .form-content__block.calories {
+          min-width: 170px;
+        }
+      }
+    }
+  }
+}
+
+.Modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+

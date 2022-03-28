@@ -1,6 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
 import RecipeItem from "./RecipeItem";
-import "./styles/RecipesPage.css"
+import "./styles/index.css"
+import "./styles/media.css"
 import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
 

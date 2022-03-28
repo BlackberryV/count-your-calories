@@ -1,5 +1,5 @@
 import {useDispatch, useSelector} from "react-redux";
-import "./styles/MyRecipes.css"
+import "./styles/index.css"
 import {NavLink} from "react-router-dom";
 import {removeMyRecipesAction} from "../reducers/myRecipesReducer";
 
@@ -14,11 +14,12 @@ const MyRecipes = () => {
             {myRecipes.map(e =>
                 <div key={e.recipe.label} className={"recipe-container"}>
                     <div>
-                        <NavLink
-                            to={`/recipe/${e.recipe.label}`}
-                            state={{recipe: e}}
-                            className={"title"}
-                        >{e.recipe.label}</NavLink>
+                        <h4>
+                            <NavLink
+                                to={`/recipe/${e.recipe.label}`}
+                                state={{recipe: e}}
+                            >{e.recipe.label}</NavLink>
+                        </h4>
                         <div>{e.myValues.myCals} calories</div>
                         <div>{e.myValues.myGrams} grams</div>
                     </div>
@@ -27,9 +28,9 @@ const MyRecipes = () => {
                         className={"small-btn"}>x
                     </button>
                 </div>)}
-                <div className={"calories-sum"}>
-                    {myRecipes.length ? myRecipes.reduce((a, e) => a + e.myValues.myCals, 0) + " cal" : ""}
-                </div>
+            <div className={"calories-sum"}>
+                {myRecipes.length ? myRecipes.reduce((a, e) => a + e.myValues.myCals, 0) + " cal" : ""}
+            </div>
         </div>
     )
 }
