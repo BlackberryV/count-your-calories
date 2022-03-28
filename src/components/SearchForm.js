@@ -2,7 +2,8 @@ import {useState} from "react";
 import {useDispatch} from "react-redux";
 import {searchRecipes} from "../reducers/asyncActions";
 import {useNavigate} from "react-router-dom";
-import "./styles/index.css"
+import "./styles/index.css";
+import "./styles/media.css"
 
 const SearchForm = () => {
     const dispatch = useDispatch();

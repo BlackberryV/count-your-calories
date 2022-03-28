@@ -1,4 +1,5 @@
 import "./styles/index.css"
+import "./styles/media.css"
 import {useDispatch} from "react-redux";
 import {addMyRecipesAction} from "../reducers/myRecipesReducer";
 import {useState} from "react";

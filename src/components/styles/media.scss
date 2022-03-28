@@ -1,9 +1,102 @@
-@media (max-width: 400px) {
-
+@media (max-width: 1200px) {
   .App {
-    .content {
+    .content_left {
+      display: none;
+    }
+  }
+  .my-recipes-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    justify-content: center;
+
+    label {
       display: flex;
       flex-direction: column;
     }
   }
+  .Header {
+    .my-recipes_link {
+      display: block;
+    }
+  }
+
 }
+
+@media (max-width: 900px) {
+  .RecipePage {
+    .info-container {
+      display: flex;
+      flex-direction: column;
+
+      .info-container_img {
+        display: flex;
+        justify-content: center;
+
+        img {
+          height: 300px;
+          width: 300px;
+        }
+      }
+    }
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .Header {
+    .nav-wrapper {
+      .top-menu {
+        display: none;
+      }
+
+      .top-menu_active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: end;
+        gap: 10px;
+        right: 20px;
+        top: 80px;
+
+        .dropdown-content {
+          position: static;
+        }
+
+        button {
+          width: 120px;
+        }
+      }
+    }
+
+    .my-recipes_link {
+      display: block;
+    }
+  }
+
+  .SearchForm {
+    display: flex;
+
+    input {
+      width: 100px;
+    }
+  }
+}
+
+
+@media (max-width: 470px) {
+  .App {
+    width: 100vw;
+  }
+  .RecipeItem {
+    width: 75%;
+    height: 40%;
+    padding: 10px;
+  }
+  .RecipePage {
+    width: 85vw;
+  }
+}
+
+

@@ -1,5 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
 import "./styles/index.css"
+import "./styles/media.css"
 import {NavLink} from "react-router-dom";
 import {removeMyRecipesAction} from "../reducers/myRecipesReducer";
 

@@ -2,6 +2,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useState} from "react";
 import {countCaloriesNormaAction, resetCaloriesNormaAction} from "../reducers/yourNormaReducer";
 import "./styles/index.css"
+import "./styles/media.css"
 import {useForm} from "react-hook-form";
 
 const CountNormaForm = () => {

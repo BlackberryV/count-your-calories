@@ -40,7 +40,8 @@ a:hover {
 }
 
 ul {
-  margin-top: 0;
+  margin: 0;
+  padding-left: 15px;
 
   li {
     margin-bottom: 7px;
@@ -88,11 +89,11 @@ input {
 
   .content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 20px;
 
-    .content_right {
-      width: 200px;
+    .content_left {
+      width: 270px;
     }
   }
 }
@@ -112,10 +113,23 @@ input {
     background-size: cover;
   }
 
-  nav {
+  .nav-wrapper {
+    display: flex;
+    gap: 20px;
+  }
+
+  .top-menu {
     display: flex;
     align-items: center;
-    gap: 30px
+    gap: 30px;
+
+    a {
+      color: white;
+    }
+  }
+
+  .my-recipes_link {
+    display: none;
   }
 }
 
@@ -125,7 +139,7 @@ input {
   }
 }
 
-.dropdown:hover {
+.dropdown:hover, .dropdown:active, .dropdown:enabled {
   .dropdown-content {
     display: flex;
     flex-direction: column;
@@ -133,7 +147,7 @@ input {
     z-index: 2;
     padding: 10px;
     row-gap: 10px;
-    background-color: rgb($accent, 0.8);
+    background-color: rgb($accent, 0.7);
 
     a {
       color: white;
@@ -142,18 +156,32 @@ input {
 }
 
 .SearchForm {
+  display: flex;
+
   button {
-    border-radius:  0 $radius $radius 0;
+    border-radius: 0 $radius $radius 0;
   }
+
   input {
     border-radius: $radius 0 0 $radius;
     border-right: none;
   }
 }
 
+.menu-toggle {
+  width: 26px;
+  height: 26px;
+  background-image: url("menu-white.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: none;
+}
+
 .RecipesPage {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   max-width: 1200px;
 }
@@ -227,6 +255,7 @@ input {
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   row-gap: 20px;
 
   img {

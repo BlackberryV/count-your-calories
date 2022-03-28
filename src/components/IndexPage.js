@@ -1,4 +1,5 @@
 import {useDispatch, useSelector} from "react-redux";
+import "./styles/media.css"
 import {useEffect} from "react";
 import RecipeItem from "./RecipeItem";
 import {getIndexPage} from "../reducers/asyncActions";

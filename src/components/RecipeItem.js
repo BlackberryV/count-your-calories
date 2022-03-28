@@ -1,4 +1,5 @@
 import "./styles/index.css"
+import "./styles/media.css"
 import {NavLink} from "react-router-dom";
 import Modal from "./Modal";
 import {useState} from "react";
